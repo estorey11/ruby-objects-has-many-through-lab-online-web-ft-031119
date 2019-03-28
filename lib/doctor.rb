@@ -20,4 +20,6 @@ class Doctor
   end
   
   def patients
+    self.appointments.select{|app|app.patient}
+  end
 end
