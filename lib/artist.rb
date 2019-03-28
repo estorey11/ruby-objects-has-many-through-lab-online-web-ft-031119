@@ -16,6 +16,12 @@ class Artist
   end
   
   def songs 
-    
+    Songs.select(|song| song.artist==self)
+  end
+  
+  def genres 
+    genres=[]
+    self.songs.each{|song| genres << song.genre}
+    genres
   end
 end
