@@ -18,6 +18,6 @@ class Genre
   def artists
     artists=[]
     self.songs.each{|song| artists << song.artist}
-    artist
+    artists
   end
 end
