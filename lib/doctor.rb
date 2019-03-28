@@ -20,6 +20,8 @@ class Doctor
   end
   
   def patients
-    self.appointments.select{|app|app.patient}
+    patients=[]
+    self.appointments.each{|app|patients << app.patient}
+    patients
   end
 end
