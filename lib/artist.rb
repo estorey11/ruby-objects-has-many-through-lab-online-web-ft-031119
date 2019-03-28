@@ -16,7 +16,7 @@ class Artist
   end
   
   def songs 
-    Songs.select(|song| song.artist==self)
+    Songs.select{|song| song.artist==self}
   end
   
   def genres 
